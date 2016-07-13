@@ -2,25 +2,25 @@ package com.example.spring.service.impl;
 
 import java.util.List;
 
-import com.example.spring.domain.Person;
+import com.example.spring.domain.User;
 import com.example.spring.service.UserService;
 
 public class UserServiceImpl implements UserService {
 
 	@Override
-	public List<Person> list() {
+	public List<User> list() {
 		//call method from UserRepository and remove throw
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
-	public Person get(int id) {
+	public User get(int id) {
 		//call method from UserRepository and remove throw
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
-	public void save(Person person) {
+	public void save(User user) {
 		//call method from UserRepository and remove throw
 		throw new UnsupportedOperationException();
 	}

@@ -2,10 +2,10 @@ package com.example.spring.repository;
 
 import java.util.List;
 
-import com.example.spring.domain.Person;
+import com.example.spring.domain.User;
 
 public interface UserRepository {
-	List<Person> list();
-	Person get(int id);
-	void save(Person person);
+	List<User> list();
+	User get(int id);
+	void save(User user);
 }
