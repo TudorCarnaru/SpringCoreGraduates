@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.example.spring.controller.UserController;
 
 @Configuration
-@ComponentScan("thisshouldbereplaced") // search the ... package for @Component classes
+@ComponentScan("com.example.spring") // search the ... package for @Component classes
 public class Config {
 	@Bean
 	public UserController createUserController(){

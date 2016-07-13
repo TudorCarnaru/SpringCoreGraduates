@@ -1,12 +1,25 @@
 package com.example.spring.domain;
 
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
 public class User {
 	private int id;
     private String firstname="";
     private String lastname="";
     private int age;
 
-
+    public User(){};
+    public User(int id, String lastname, String firstname, int age)
+    {
+        this.id = id;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.age = age;
+    }
     /**
      * Getters
      */

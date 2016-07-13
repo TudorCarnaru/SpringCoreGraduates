@@ -5,24 +5,30 @@ import java.util.List;
 
 import com.example.spring.domain.User;
 import com.example.spring.repository.UserRepository;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
+@Repository
 public class UserRepositoryImpl implements UserRepository{
-
+    private ArrayList<User> newList = new ArrayList<User>();
 	@Override
 	public List<User> list() {
-        System.out.println("This returns a list");
-		return new ArrayList<User>();
+		return newList;
 	}
 
 	@Override
 	public User get(int id) {
-        System.out.println("This searches for a user based on the ID" );
-		return null;
+		for( User usr: newList)
+		{
+			if(id== usr.getId()) return usr;
+		}
+        return null;
 	}
 
 	@Override
 	public void save(User user) {
-		System.out.println("This will save a user inside the list we just made");
+		newList.add(user);
 	}
 
 }
